@@ -21,7 +21,7 @@ body {
   white-space: pre-wrap;
   text-align: left;
   font-size: 5pt;
-  color: green;
+  color: yellow;
 }
 
 .page-outer {
@@ -76,8 +76,8 @@ body {
   --hmargin: 7mm;
 }
 .page-labels32 {
-  height: 33.8mm;
-  width: 48.3mm;
+  height: 30mm;
+  width: 42mm;
 }
 
 .page-labels8 {
