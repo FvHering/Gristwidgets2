@@ -1,5 +1,5 @@
 body {
-  font-family: Sans-Serif;
+  font-family: Helvetive, Sans-Serif;
   padding: 0;
   margin: 0;
   --label-outline: 0 0 0 1px #aaa;
@@ -27,8 +27,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8.5in;
-  height: 11in;
+  width: 210mm;
+  height: 297mm;
 }
 
 @media not print {
@@ -69,6 +69,15 @@ body {
  * Firefox includes unknown fixed margins; to work around it, we center content in the page, and
  * set it in @media print to 100%, which may be less than the page due to these margins.
  */
+
+.page-labels32 {
+  --vmargin: 13mm;
+  --hmargin: 8mm;
+}
+.page-labels32 {
+  height: 33.8mm;
+  width: 48.3mm;
+}
 
 .page-labels8 {
   --vmargin: 0.5833in;
