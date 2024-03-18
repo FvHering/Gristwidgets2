@@ -80,13 +80,13 @@ body {
   width: 48.3mm;
 }
 
-.page-labels8 {
-  --vmargin: 0.5833in;
-  --hmargin: 0.6875in;
+.page-labels1 {
+  --vmargin: 0;
+  --hmargin: 0;
 }
-.label-labels8 {
-  height: 2.3333in;
-  width: 3.375in;
+.label-labels1 {
+  height: 297mm;
+  width: 210mm;
 }
 
 .page-labels10 {
