@@ -21,7 +21,7 @@ body {
   white-space: pre-wrap;
   text-align: left;
   font-size: 5pt;
-  color: blue;
+  color: red;
 }
 
 .page-outer {
@@ -72,12 +72,12 @@ body {
  */
 
 .page-labels32 {
-  --vmargin: 13.3mm;
-  --hmargin: 8.4mm;
+  --vmargin: 13,3mm;
+  --hmargin: 8,4mm;
 }
 .page-labels32 {
-  height: 33.8mm;
-  width: 48.3mm;
+  height: 33,8mm;
+  width: 48,3mm;
 }
 
 .page-labels8 {
