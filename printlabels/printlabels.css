@@ -20,8 +20,8 @@ body {
 .label-content {
   white-space: pre-wrap;
   text-align: left;
-  font-size: 5pt;
-  color: yellow;
+  font-size: 6pt;
+  color: Black;
 }
 
 .page-outer {
@@ -72,12 +72,12 @@ body {
  */
 
 .page-labels32 {
-  --vmargin: 11mm;
-  --hmargin: 7mm;
+  --vmargin: 13,3mm;
+  --hmargin: 8.4mm;
 }
-.page-labels32 {
-  height: 30mm;
-  width: 42mm;
+.label-labels32 {
+  height: 33,8mm;
+  width: 48,3mm;
 }
 
 .page-labels8 {
