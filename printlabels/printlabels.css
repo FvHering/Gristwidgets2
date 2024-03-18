@@ -71,12 +71,12 @@ body {
  */
 
 .page-labels32 {
-  --vmargin: 13mm;
-  --hmargin: 8mm;
+  --vmargin: 13.3mm;
+  --hmargin: 8.4mm;
 }
 .page-labels32 {
-  height: 33mm;
-  width: 48mm;
+  height: 33.8mm;
+  width: 48.3mm;
 }
 
 .page-labels8 {
