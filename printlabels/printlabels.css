@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica, Sans-Serif;
+  font-family: Serif;
   padding: 0;
   margin: 0;
   --label-outline: 0 0 0 1px #aaa;
@@ -27,15 +27,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8.5in;
-  height: 11in;
+  width: 210mm;
+  height: 297mm;
 }
 
 @media not print {
   .page-outer {
     overflow: hidden;
-    width: calc(8.5in * var(--page-scaling, 1));
-    height: calc(11in * var(--page-scaling, 1));
+    width: calc(210mm * var(--page-scaling, 1));
+    height: calc(297mm * var(--page-scaling, 1));
   }
   .labelpage {
     transform: scale(var(--page-scaling, 1));
@@ -59,10 +59,10 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   align-content: space-between;
-  height: calc(11in - 2 * var(--vmargin, 0));
-  width: calc(8.5in - 2 * var(--hmargin, 0));
-  min-height: calc(11in - 2 * var(--vmargin, 0));
-  min-width: calc(8.5in - 2 * var(--hmargin, 0));
+  height: calc(297mm - 2 * var(--vmargin, 0));
+  width: calc(210mm - 2 * var(--hmargin, 0));
+  min-height: calc(297mm - 2 * var(--vmargin, 0));
+  min-width: calc(210mm - 2 * var(--hmargin, 0));
 }
 
 /*
