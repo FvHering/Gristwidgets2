@@ -12,8 +12,8 @@ id: 'labels32',
   perPage: 32,
 }, {
   id: 'labels1',
-  name: '8 per sheet (2-1/3" x 3-3/8")',
-  perPage: 8,
+  name: '1 per sheet',
+  perPage: 1,
 }, {
   id: 'labels10',
   name: '10 per sheet (2" x 4")',
