@@ -89,22 +89,22 @@ body {
   width: 210mm;
 }
 
-.page-labels10 {
-  --vmargin: 0.5in;
-  --hmargin: 0.156in;
+.page-labels24 {
+  --vmargin: 4.5mm;
+  --hmargin: 0mm;
 }
-.label-labels10 {
-  height: 2in;
-  width: 4in;
+.label-labels24 {
+  height: 36mm;
+  width: 70mm;
 }
 
-.page-labels20 {
-  --vmargin: 0.5in;
-  --hmargin: 0.167in;
+.page-labels65 {
+  --vmargin: 11mm;
+  --hmargin: 10mm;
 }
-.label-labels20 {
-  height: 1in;
-  width: 4in;
+.label-labels65 {
+  height: 21.2mm;
+  width: 38mm;
 }
 .page-labels30 {
   --vmargin: 0.5in;
