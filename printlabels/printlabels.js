@@ -10,12 +10,12 @@ const templates = [{
 id: 'labels32',
   name: '32 per sheet (48,3mmx33,8mm)',
   perPage: 32,
-  fontSize: 9pt,
+  fontSize: '9pt',
 }, {
   id: 'labels1',
   name: '1 per sheet',
   perPage: 1,
-  font-Size: 3pt,
+  font-Size: '3pt',
 }, {
   id: 'labels24',
   name: 'Avery Zweckform 3490 (70 X 36mm)',
