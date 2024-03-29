@@ -15,6 +15,7 @@ id: 'labels32',
   id: 'labels1',
   name: '1 per sheet',
   perPage: 1,
+  font-Size: 3pt,
 }, {
   id: 'labels24',
   name: 'Avery Zweckform 3490 (70 X 36mm)',
