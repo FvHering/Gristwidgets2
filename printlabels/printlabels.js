@@ -185,6 +185,7 @@ ready(function() {
     },
     methods: {
       arrangeLabels,
+      updateFontSize,
       async save() {
         // Custom save handler to save only when user changed the value.
         await grist.widgetApi.setOption('template', this.template.id);
