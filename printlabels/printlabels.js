@@ -10,6 +10,7 @@ const templates = [{
 id: 'labels32',
   name: '32 per sheet (48,3mmx33,8mm)',
   perPage: 32,
+  fontSize: 9pt,
 }, {
   id: 'labels1',
   name: '1 per sheet',
@@ -117,6 +118,10 @@ function updateRecords() {
   } catch (err) {
     handleError(err);
   }
+}
+
+function updateFontSize() {
+  document.querySelectorAll("label-content").style.fontSiz = templates.fontSize;
 }
 
 // Page width before any scaling is applied.
