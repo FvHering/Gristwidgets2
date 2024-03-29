@@ -122,7 +122,7 @@ function updateRecords() {
 }
 
 function updateFontSize() {
-  document.querySelectorAll("label-content").style.fontSize = templates.fontSize;
+  document.querySelectorAll(".label-content").style.fontSize = templates.fontSize;
 }
 
 // Page width before any scaling is applied.
