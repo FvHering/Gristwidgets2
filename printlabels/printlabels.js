@@ -56,7 +56,7 @@ let data = {
   // them with data.
   blanks: 0,
   rows: null,
-  fontSize: '9pt'
+  fontSize: '9 pt'
 };
 
 // Columns we expect
