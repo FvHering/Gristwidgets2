@@ -10,12 +10,10 @@ const templates = [{
 id: 'labels32',
   name: '32 per sheet (48,3mmx33,8mm)',
   perPage: 32,
-  fontSize: '9pt',
 }, {
   id: 'labels1',
   name: '1 per sheet',
   perPage: 1,
-  fontSize: '3pt',
 }, {
   id: 'labels24',
   name: 'Avery Zweckform 3490 (70 X 36mm)',
@@ -123,7 +121,7 @@ function updateRecords() {
 }
 
 function updateFontSize() {
-  document.querySelectorAll(".label-content").style.setProperty("font-size", template.fontSize);
+  document.querySelectorAll(".label-content").style.setProperty("font-size", data.fontSize);
 }
 
 // Page width before any scaling is applied.
@@ -191,6 +189,7 @@ ready(function() {
         // Custom save handler to save only when user changed the value.
         await grist.widgetApi.setOption('template', this.template.id);
         await grist.widgetApi.setOption('blanks', this.blanks);
+        await grist.widgetApi.setOption('fontSize', this.fontSize);
         updateFonsize();
       }
     },
