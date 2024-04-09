@@ -180,7 +180,7 @@ ready(function() {
     watch : {
       fontSize() {
         updateFontSize();
-      };
+      },
       rows() {
         updateRecords();
       }
