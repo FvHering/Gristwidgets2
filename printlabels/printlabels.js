@@ -97,7 +97,7 @@ function handleError(err) {
 
 function updateFontSize() {
   document.querySelectorAll(".label-content").forEach(function(element) {
-    element.style.setProperty("font-size", data.fontSize);
+    element.style.setProperty("font-size", `${data.fontSize} pt`);
   });
 }
 
