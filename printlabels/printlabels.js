@@ -57,7 +57,8 @@ let data = {
   // Blanks, if positive, tells to leave this number of labels blank before starting to populate
   // them with data.
   blanks: 0,
-  rows: null
+  rows: null,
+  fontSize: '9pt'
 };
 
 // Columns we expect
@@ -190,6 +191,7 @@ ready(function() {
         // Custom save handler to save only when user changed the value.
         await grist.widgetApi.setOption('template', this.template.id);
         await grist.widgetApi.setOption('blanks', this.blanks);
+        updateFonsize();
       }
     },
     updated: () => setTimeout(updateSize, 0),
