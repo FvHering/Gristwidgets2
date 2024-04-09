@@ -95,6 +95,12 @@ function handleError(err) {
   target.status = String(err).replace(/^Error: /, '');
 }
 
+function updateFontSize() {
+  document.querySelectorAll(".label-content").forEach(function(element) {
+    element.style.setProperty("font-size", data.fontSize);
+  });
+}
+
 function updateRecords() {
   try {
     data.status = '';
@@ -115,16 +121,12 @@ function updateRecords() {
       }
     }
     data.labels = labels;
+    updateFontSize();
   } catch (err) {
     handleError(err);
   }
 }
 
-function updateFontSize() {
-  document.querySelectorAll(".label-content").forEach(function(element) {
-    element.style.setProperty("font-size", data.fontSize);
-  });
-}
 
 // Page width before any scaling is applied.
 let pageWidth = null;
@@ -174,22 +176,18 @@ ready(function() {
     data.rows = grist.mapColumnNames(rows) || rows;
   });
   window.onresize = updateSize;
-
+  
   Vue.config.errorHandler = handleError;
   app = new Vue({
     el: '#app',
     data: data,
     watch : {
-      fontSize() {
-        updateFontSize();
-      },
-      rows() {
-        updateRecords();
+        rows() {
+          updateRecords();
       }
     },
     methods: {
       arrangeLabels,
-      updateFontSize,
       async save() {
         // Custom save handler to save only when user changed the value.
         await grist.widgetApi.setOption('template', this.template.id);
