@@ -34,8 +34,8 @@
       </div>
       <div v-show="showOptions" id="options-container" v-on:click="showOptions = false">
         <div id="options-popup" v-on:click.stop>
-          <div>Leave initial blanks <input type="number" id="blanks" v-model="blanks" @change="save()"></div>
-          <div>Fontsize: <input type="number" id="fontSize" v-model="fontSize" @change="save()"></div>
+          <div>Leere Felder zu Beginn: <input type="number" id="blanks" v-model="blanks" @change="save()"></div>
+          <div>Schriftgröße: <input type="number" id="fontSize" v-model="fontSize" @change="save()"></div>
         </div>
       </div>
       <template v-if="labels">
