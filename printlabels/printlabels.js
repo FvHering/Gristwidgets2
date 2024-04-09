@@ -178,6 +178,9 @@ ready(function() {
     el: '#app',
     data: data,
     watch : {
+      fontSize() {
+        updateFontSize();
+      };
       rows() {
         updateRecords();
       }
