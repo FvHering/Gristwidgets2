@@ -193,7 +193,6 @@ ready(function() {
         await grist.widgetApi.setOption('template', this.template.id);
         await grist.widgetApi.setOption('blanks', this.blanks);
         await grist.widgetApi.setOption('fontSize', this.fontSize);
-        updateFonsize();
       }
     },
     updated: () => setTimeout(updateSize, 0),
