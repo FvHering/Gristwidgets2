@@ -1,6 +1,6 @@
 import { ref } from "https://esm.sh/vue";
 
-const name = "Klaus von Kleber";
+const name = "";
 
 function getInitials (fullName) {
   return fullName.split(' ').map(function(str) { return str ? str[0] : "";}).join('')
@@ -24,6 +24,12 @@ function updateColor() {
   var textColor = l > 70 ? "#555" : "#fff";
   return stringToHslColor(name2, s, l);
 }
+
+grist.ready({requiredAccess: 'read table'});
+  grist.onRecord(function (record) {
+    name = record.Name;
+  });
+
 
 
 const app = Vue.createApp({
