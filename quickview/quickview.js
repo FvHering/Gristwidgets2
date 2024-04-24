@@ -1,5 +1,14 @@
 import { ref } from "https://esm.sh/vue";
 
+function ready(fn) {
+  if (document.readyState !== 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+
 const name = "";
 
 function getInitials (fullName) {
