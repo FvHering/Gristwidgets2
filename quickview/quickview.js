@@ -13,7 +13,7 @@ ready(function() {
     grist.onRecord(function (record) {
       personenName = record.Name;
     })
-}
+})
 
 const app = Vue.createApp({
   setup () {
