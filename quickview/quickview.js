@@ -7,7 +7,7 @@ function ready(fn) {
   }
 }
 
-const personenName = "";
+var personenName = "";
 
 ready(function() {
   grist.ready({requiredAccess: 'read table'});
