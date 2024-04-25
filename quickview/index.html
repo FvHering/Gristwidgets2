@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.prod.css">
+  <link rel="stylesheet" type="text/css" href="quickview.css">
+</head>
+<body>
+  <div id="q-app" style="min-height: 100vh;">
+    <div class="q-pa-md row items-start q-gutter-md">
+      <q-card class="my-card" flat bordered>
+        <q-item>
+          <q-item-section avatar class="my-avatar">
+            <q-avatar :style="aHexColor" text-color="grey" size="100px">
+              {{initials}}
+            </q-avatar>
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label class="text-h4"> {{ personenName }} </q-item-label>
+              <q-item>
+                <q-chip dense color="primary" text-color="white">Gemeindeglied</q-chip>
+                <q-chip dense :color="gemeinde.rodenberg.gemeindeFarbe" text-color="white" icon="event">{{gemeinde.rodenberg.gemeindeName}}</q-chip>
+              </q-item>
+            </q-item>
+          </q-item-section>
+
+        <q-card-section horizontal>
+          <q-card-section>
+            Hat Geburtstag am: {{ Geburtstag }}
+          </q-card-section>
+
+          <q-card-section class="col-4">
+            <q-card-section class="p">Straße1</q-card-section>
+            <q-card-section class="h1-text">Straße 2</q-card-section>
+            <q-card-section> {{ aHexColor }}</q-card-section>
+            <q-card-section>Straße 2</q-card-section>          
+          </q-card-section>
+        </q-card-section>
+      </q-card>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.15.4/dist/quasar.umd.prod.js"></script>
+
+  <script src="quickview.js"></script>
+</body>
+</html>
