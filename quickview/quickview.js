@@ -17,7 +17,7 @@ ready(function() {
 
 const app = Vue.createApp({
   setup () {
-//    var personenName = "Klaus Kleber";
+    var personenName = "";
     var aHexColor = "";
     var initials = "";
 
