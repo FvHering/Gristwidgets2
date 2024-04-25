@@ -7,6 +7,7 @@ function ready(fn) {
   }
 }
 
+const personenName = "";
 
 ready(function() {
   grist.ready({requiredAccess: 'read table'});
@@ -17,7 +18,6 @@ ready(function() {
 
 const app = Vue.createApp({
   setup () {
-    var personenName = "";
     var aHexColor = "";
     var initials = "";
 
