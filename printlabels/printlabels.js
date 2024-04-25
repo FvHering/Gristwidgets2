@@ -55,7 +55,8 @@ let data = {
   // Blanks, if positive, tells to leave this number of labels blank before starting to populate
   // them with data.
   blanks: 0,
-  rows: null
+  rows: null,
+  fontSize: '9'
 };
 
 // Columns we expect
@@ -94,6 +95,12 @@ function handleError(err) {
   target.status = String(err).replace(/^Error: /, '');
 }
 
+function updateFontSize() {
+  document.querySelectorAll(".label-content").forEach(function(element) {
+    element.style.setProperty("font-size", `${data.fontSize} pt`);
+  });
+}
+
 function updateRecords() {
   try {
     data.status = '';
@@ -114,10 +121,12 @@ function updateRecords() {
       }
     }
     data.labels = labels;
+    updateFontSize();
   } catch (err) {
     handleError(err);
   }
 }
+
 
 // Page width before any scaling is applied.
 let pageWidth = null;
@@ -167,14 +176,14 @@ ready(function() {
     data.rows = grist.mapColumnNames(rows) || rows;
   });
   window.onresize = updateSize;
-
+  
   Vue.config.errorHandler = handleError;
   app = new Vue({
     el: '#app',
     data: data,
     watch : {
-      rows() {
-        updateRecords();
+        rows() {
+          updateRecords();
       }
     },
     methods: {
@@ -183,6 +192,7 @@ ready(function() {
         // Custom save handler to save only when user changed the value.
         await grist.widgetApi.setOption('template', this.template.id);
         await grist.widgetApi.setOption('blanks', this.blanks);
+        await grist.widgetApi.setOption('fontSize', this.fontSize);
       }
     },
     updated: () => setTimeout(updateSize, 0),
