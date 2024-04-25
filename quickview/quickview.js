@@ -13,8 +13,8 @@ ready(function() {
   grist.ready({requiredAccess: 'read table'});
     grist.onRecord(function (record) {
       personenName = record.Name;
-    })
-})
+    });
+});
 
 const app = Vue.createApp({
   setup () {
