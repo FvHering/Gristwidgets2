@@ -44,19 +44,13 @@ const app = Vue.createApp({
       return stringToHslColor(name2, s, l);
     }
 
-
-    Vue.watch(() => personenName, (newValue) => {
-      aHexColor.value = 'backgroundColor: ' + stringToHslColor(newValue, 60, 30);
-      initials.value = getInitials(newValue);
-    });
-
     
     return {
       personenName,
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      aHexColor,
-      initials,
+      aHexColor: updateColor(),
+      initials: getInitials(),
       gemeinde: {
         rodenberg: {
           gemeindeName: 'St. Johannes-Gemeinde Rodnberg',
