@@ -17,14 +17,33 @@ ready(function() {
 });
 
 const app = Vue.createApp({
-  setup () {
-    var aHexColor = "";
-    var initials = "";
+  data: () => ({
+    personenName: "",
+    initialas: getInitials(personenName),
+    gemeinde: "",
+    gliedschaftsStatus: "",
+    aHexColor: "blue"
+  }),
+  
+  created() {
+    this.updateData()
+  },
 
+  watch: {
+    record: 'updateData',
+  },
+
+  methods: {
+    updateData() {
+      personenName = record.Name,
+      gemeinde = record.Gemeinde,
+      gliedschaftsStatus = record.Gliedschaftsstatus,
+      aHexColor = stringToHslColor(personenName, 60, 30)
+     },
+    
     function getInitials (fullName) {
       return fullName.split(' ').map(function(str) { return str ? str[0] : "";}).join('')
     }
-    
     
     function stringToHslColor(str, s, l) {
       var hash = 0;
@@ -44,24 +63,6 @@ const app = Vue.createApp({
       return stringToHslColor(name2, s, l);
     }
 
-    
-    return {
-      personenName,
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      aHexColor: updateColor(),
-      initials: getInitials(),
-      gemeinde: {
-        rodenberg: {
-          gemeindeName: 'St. Johannes-Gemeinde Rodnberg',
-          gemeindeFarbe: 'red'
-        },
-        stadthagen: {
-          gemeindeName: 'Kreuzgemeinde Stadthagen',
-          gemeindeFarbe: 'green'
-        }
-      }
-    }
   }
 });
 
