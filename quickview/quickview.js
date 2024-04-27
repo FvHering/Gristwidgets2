@@ -26,11 +26,11 @@ const app = Vue.createApp({
   created() {
     this.updateData()
   },
-
+/*
   watch: {
     grist.onRecord(function (record) {}): 'updateData',
   },
-
+*/
   methods: {
     updateData() {
       record = grist.onRecord(function (record) {}),
