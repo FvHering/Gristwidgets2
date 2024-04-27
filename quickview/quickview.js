@@ -28,11 +28,12 @@ const app = Vue.createApp({
   },
 
   watch: {
-    grist.record: 'updateData',
+    grist.onRecord(function (record) {}): 'updateData',
   },
 
   methods: {
     updateData() {
+      record = grist.onRecord(function (record) {}),
       personenName = grist.record.Name,
       gemeinde = grist.record.Gemeinde,
       gliedschaftsStatus = grist.record.Gliedschaftsstatus,
