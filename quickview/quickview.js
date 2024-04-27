@@ -43,7 +43,7 @@ const app = Vue.createApp({
     
     getInitials (fullName) {
       return fullName.split(' ').map(function(str) { return str ? str[0] : "";}).join('')
-    }
+    },
     
     stringToHslColor(str, s, l) {
       var hash = 0;
@@ -52,7 +52,7 @@ const app = Vue.createApp({
       }
       var h = hash % 360;
       return 'hsl('+h+', '+s+'%, '+l+'%)';
-    }
+    },
     
     
     updateColor() {
