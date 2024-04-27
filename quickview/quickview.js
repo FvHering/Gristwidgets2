@@ -34,9 +34,9 @@ const app = Vue.createApp({
   methods: {
     updateData() {
       record = grist.onRecord(function (record) {}),
-      personenName = grist.record.Name,
-      gemeinde = grist.record.Gemeinde,
-      gliedschaftsStatus = grist.record.Gliedschaftsstatus,
+      personenName = record.Name,
+      gemeinde = record.Gemeinde,
+      gliedschaftsStatus = record.Gliedschaftsstatus,
       aHexColor = stringToHslColor(personenName, 60, 30),
       initials = getInitials(personenName)
      },
