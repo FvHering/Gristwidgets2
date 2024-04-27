@@ -21,7 +21,7 @@ const app = Vue.createApp({
     personenName: "",
     initialas: "",
     gemeinde: "",
-    gemeindeFarbe: "",
+    gemeindeFarbe: "orange",
     gliedschaftsStatus: "",
     aHexColor: "blue"
   }),
