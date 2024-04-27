@@ -19,7 +19,7 @@ ready(function() {
 const app = Vue.createApp({
   data: () => ({
     personenName: "",
-    initialas: getInitials(personenName),
+    initialas: "",
     gemeinde: "",
     gliedschaftsStatus: "",
     aHexColor: "blue"
@@ -38,7 +38,8 @@ const app = Vue.createApp({
       personenName = record.Name,
       gemeinde = record.Gemeinde,
       gliedschaftsStatus = record.Gliedschaftsstatus,
-      aHexColor = stringToHslColor(personenName, 60, 30)
+      aHexColor = stringToHslColor(personenName, 60, 30),
+      initials = getInitials(personenName)
      },
     
     getInitials (fullName) {
