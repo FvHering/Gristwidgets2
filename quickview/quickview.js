@@ -41,11 +41,11 @@ const app = Vue.createApp({
       aHexColor = stringToHslColor(personenName, 60, 30)
      },
     
-    function getInitials (fullName) {
+    getInitials (fullName) {
       return fullName.split(' ').map(function(str) { return str ? str[0] : "";}).join('')
     }
     
-    function stringToHslColor(str, s, l) {
+    stringToHslColor(str, s, l) {
       var hash = 0;
       for (var i = 0; i < str.length; i++) {
         hash = str.charCodeAt(i) + ((hash << 5) - hash);
@@ -55,7 +55,7 @@ const app = Vue.createApp({
     }
     
     
-    function updateColor() {
+    updateColor() {
       var name2 = personenName;
       var s = 60;
       var l = 30;
