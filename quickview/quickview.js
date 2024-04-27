@@ -11,9 +11,6 @@ var personenName = "";
 
 ready(function() {
   grist.ready({requiredAccess: 'read table'});
-    grist.onRecord(function (record) {
-      personenName = record.Name;
-    });
 });
 
 const app = Vue.createApp({
@@ -31,14 +28,14 @@ const app = Vue.createApp({
   },
 
   watch: {
-    record: 'updateData',
+    grist.record: 'updateData',
   },
 
   methods: {
     updateData() {
-      personenName = record.Name,
-      gemeinde = record.Gemeinde,
-      gliedschaftsStatus = record.Gliedschaftsstatus,
+      personenName = grist.record.Name,
+      gemeinde = grist.record.Gemeinde,
+      gliedschaftsStatus = grist.record.Gliedschaftsstatus,
       aHexColor = stringToHslColor(personenName, 60, 30),
       initials = getInitials(personenName)
      },
