@@ -106,13 +106,14 @@ body {
   height: 21.2mm;
   width: 38mm;
 }
+
 .page-labels30 {
-  --vmargin: 0.5in;
-  --hmargin: 0.1875in;
+  --vmargin: 21mm;
+  --hmargin: 0mm;
 }
 .label-labels30 {
-  height: 1in;
-  width: 2.625in;
+  height: 51mm;
+  width: 70mm;
 }
 
 .page-labels60 {
