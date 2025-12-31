@@ -24,8 +24,8 @@ id: 'labels32',
   perPage: 65,
 }, {
   id: 'labels30',
-  name: '30 per sheet (1" x 2-5/8")',
-  perPage: 30,
+  name: 'Avery Zweckform 3669 (51mm x 70mm',
+  perPage: 15,
 }, {
   id: 'labels60',
   name: '60 per sheet (1/2" x 1-3/4")',
